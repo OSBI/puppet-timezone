@@ -13,13 +13,14 @@ class timezone {
     file { '/etc/timezone':
         ensure  => present,
         content => template('timezone/clock.erb'),
-        notify  => Service['ntp']
+        notify  => Service['ntp'],
+	require => Service['ntp']
     }
     
     file { '/etc/localtime':
         ensure  => link,
         target  => '/usr/share/zoneinfo/UTC',
-        require => Package['tzdata'],
+        require => [Package['tzdata'], Service['ntp']],
         notify  => Service['ntp']
     }
     
