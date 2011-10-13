@@ -3,7 +3,7 @@ class timezone {
     # requires ntp, but not included here as it makes key changes to the OS 
     # and should instead be included in some sort of default node class
     # (common.pp) which is included on all nodes.
-    
+    include ntp 
     $timezone_zone = extlookup('timezone_zone','Etc/UTC')
     
     package { 'tzdata':
