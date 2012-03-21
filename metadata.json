@@ -1,0 +1,25 @@
+{
+  "name": "Analytical Labs-timezone",
+  "author": "Tom Barber",
+  "description": "",
+  "license": "",
+  "project_page": "",
+  "source": "",
+  "summary": "",
+  "version": "1.0",
+  "checksums": {
+    "Modulefile": "69a3f615822ffc98e23c3162cfaad106",
+    "README": "d41d8cd98f00b204e9800998ecf8427e",
+    "manifests/init.pp": "5d6bd02329498361e8a6c43c977a202b",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "templates/clock.erb": "aef0f18a5247a92817d58055ef3b262d",
+    "tests/init.pp": "6bafc4062b1bafbdf8e36e81b55ee1c5"
+  },
+  "dependencies": [
+    {
+      "name": "Analytical Labs/ntp",
+      "versionRequirement": "\u003d\u003d1.0"
+    }
+  ]
+}
